@@ -1,0 +1,19 @@
+header {
+    background: rgb(147, 131, 218);
+    height: 60px;
+}
+
+header nav .nav-trigger {
+    background-color: transparent;
+    border: none;
+    margin: 10px 0 0 10px;
+}
+
+header nav .nav-trigger > .icon {
+    display: block;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin: 8px auto;
+    transition: all .3s ease-in-out;
+}
