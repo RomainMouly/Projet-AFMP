@@ -96,6 +96,38 @@ nav .btn-trigger.is-open .icon:nth-child(3){
 
 
 /* ----------------------
+    NAV HELP
+---------------------- */
+nav .nav-contact {
+    display: none;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav .nav-contact .nav-help {
+    color: var(--color-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+nav .nav-contact .nav-phone {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1;
+}
+
+@media screen and (min-width: 576px) {
+    nav .nav-contact {
+        display: inline-block;
+    }
+}
+
+
+
+/* ----------------------
     NAVBAR
 ---------------------- */
 nav .navbar-collapse {
@@ -166,7 +198,7 @@ nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
         right: 50%;
         bottom: 0;
         background: var(--color-dark);
-        height: 3px;
+        height: 2px;
         transition: left .3s ease-out,right .3s ease-out;
     }
 

@@ -1,6 +1,7 @@
 :root {
     --color-light: rgba(241, 241, 241, 1);
     --color-dark:  rgba(78, 78, 78, 1);
+    --color-primary: rgba(149, 25, 24, 1);
 
     --color-navbar: var(--color-light);
     --color-trigger-icon: var(--color-dark);
