@@ -1,0 +1,123 @@
+header {
+    background: rgb(138, 133, 133);
+}
+
+
+
+/* ----------------------
+    TRIGGER BUTTON
+---------------------- */
+header nav .nav-trigger {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    margin: 10px 0 10px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .nav-trigger:hover {
+    cursor: pointer;
+}
+
+header nav .nav-trigger.open {
+    transform: rotate(45deg);
+}
+
+header nav .nav-trigger > .icon {
+    display: block;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin: 8px auto;
+    transition: all .3s ease-in-out;
+}
+
+header nav .nav-trigger:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    top: calc(50% - 23px);
+    left: calc(50% - 19px);
+    border-radius: 100%;
+    transition: all .3s ease-in-out;
+}
+
+header nav .nav-trigger.open:before{
+    border: 2px solid #ecf0f1;
+}
+
+header nav .nav-trigger.open .icon{
+    width: 20px;
+}
+
+header nav .nav-trigger.open .icon:nth-child(2){
+    opacity: 0;
+}
+
+header nav .nav-trigger.open .icon:nth-child(1){
+    transform: translateY(8px);
+}
+
+header nav .nav-trigger.open .icon:nth-child(3){
+    transform: translateY(-13px) rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
+    header nav .nav-trigger {
+        display: none;
+    }
+}
+
+
+
+/* ----------------------
+    NAV LINK
+---------------------- */
+header .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+header .navbar-nav.open {
+    height: auto;
+    transition: all .3s ease-in-out;
+}
+
+header .navbar-nav li {
+    color: white;
+    border-bottom: 1px solid rgb(206, 198, 198);
+}
+
+header .navbar-nav li:first-child {
+    border-top: 1px solid rgb(206, 198, 198);
+}
+
+header .navbar-nav li .nav-link {
+    display: block;
+    padding: 30px 15px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header .navbar-nav li .nav-link:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    header .navbar-nav {
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    header .navbar-nav li {
+        border: none !important;
+        padding: 0;
+    }
+}
