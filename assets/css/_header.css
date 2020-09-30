@@ -1,6 +1,5 @@
 header {
-    background: rgb(147, 131, 218);
-    height: 60px;
+    background: rgb(138, 133, 133);
 }
 
 
@@ -12,7 +11,7 @@ header nav .nav-trigger {
     position: relative;
     background-color: transparent;
     border: none;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 10px 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -65,3 +64,60 @@ header nav .nav-trigger.open .icon:nth-child(3){
     transform: translateY(-13px) rotate(90deg);
 }
 
+@media screen and (min-width: 768px) {
+    header nav .nav-trigger {
+        display: none;
+    }
+}
+
+
+
+/* ----------------------
+    NAV LINK
+---------------------- */
+header .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+header .navbar-nav.open {
+    height: auto;
+    transition: all .3s ease-in-out;
+}
+
+header .navbar-nav li {
+    color: white;
+    border-bottom: 1px solid rgb(206, 198, 198);
+}
+
+header .navbar-nav li:first-child {
+    border-top: 1px solid rgb(206, 198, 198);
+}
+
+header .navbar-nav li .nav-link {
+    display: block;
+    padding: 30px 15px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header .navbar-nav li .nav-link:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    header .navbar-nav {
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    header .navbar-nav li {
+        border: none !important;
+        padding: 0;
+    }
+}
