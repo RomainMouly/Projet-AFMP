@@ -1,0 +1,10 @@
+:root {
+    --color-light: rgba(241, 241, 241, 1);
+    --color-dark:  rgba(78, 78, 78, 1);
+
+    --color-navbar: var(--color-light);
+    --color-trigger-icon: var(--color-dark);
+    --color-border-nav-link: rgba(78, 78, 78, .1);
+
+    --font-size-nav-link: 1.15rem;
+}
