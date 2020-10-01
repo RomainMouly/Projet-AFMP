@@ -1,5 +1,24 @@
-header {
-    background: rgb(138, 133, 133);
+nav {
+    position: relative;
+    background: var(--color-navbar);
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* ----------------------
+    LOGO
+---------------------- */
+nav .logo {
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+}
+
+nav .logo img {
+    width: 50%;
+    max-width: 110px;
 }
 
 
@@ -7,32 +26,36 @@ header {
 /* ----------------------
     TRIGGER BUTTON
 ---------------------- */
-header nav .nav-trigger {
-    position: relative;
+nav .btn-trigger {
+    position: absolute;
+    top: calc(88.61px / 2);
+    left: 20px;
+    transform: translateY(-50%);
     background-color: transparent;
     border: none;
-    margin: 10px 0 10px 10px;
-    transition: all 0.3s ease-in-out;
+    margin: 0;
+    transition: all .3s ease-in-out;
+    padding: 0;
 }
 
-header nav .nav-trigger:hover {
+nav .btn-trigger:hover {
     cursor: pointer;
 }
 
-header nav .nav-trigger.open {
-    transform: rotate(45deg);
+nav .btn-trigger.is-open {
+    transform: translateY(-50%) rotate(45deg);
 }
 
-header nav .nav-trigger > .icon {
+nav .btn-trigger > .icon {
     display: block;
-    background-color: #fff;
+    background-color: var(--color-trigger-icon);
     width: 30px;
     height: 2px;
     margin: 8px auto;
     transition: all .3s ease-in-out;
 }
 
-header nav .nav-trigger:before {
+nav .btn-trigger:before {
     content: "";
     position: absolute;
     width: 40px;
@@ -44,28 +67,28 @@ header nav .nav-trigger:before {
     transition: all .3s ease-in-out;
 }
 
-header nav .nav-trigger.open:before{
-    border: 2px solid #ecf0f1;
+nav .btn-trigger.is-open:before{
+    border: 2px solid var(--color-trigger-icon);
 }
 
-header nav .nav-trigger.open .icon{
+nav .btn-trigger.is-open .icon{
     width: 20px;
 }
 
-header nav .nav-trigger.open .icon:nth-child(2){
+nav .btn-trigger.is-open .icon:nth-child(2){
     opacity: 0;
 }
 
-header nav .nav-trigger.open .icon:nth-child(1){
-    transform: translateY(8px);
+nav .btn-trigger.is-open .icon:nth-child(1){
+    transform: translate(1px, 8px);
 }
 
-header nav .nav-trigger.open .icon:nth-child(3){
-    transform: translateY(-13px) rotate(90deg);
+nav .btn-trigger.is-open .icon:nth-child(3){
+    transform: translate(1px, -13px) rotate(90deg);
 }
 
 @media screen and (min-width: 768px) {
-    header nav .nav-trigger {
+    nav .btn-trigger {
         display: none;
     }
 }
@@ -73,51 +96,118 @@ header nav .nav-trigger.open .icon:nth-child(3){
 
 
 /* ----------------------
-    NAV LINK
+    NAV HELP
 ---------------------- */
-header .navbar-nav {
+nav .nav-contact {
+    display: none;
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav .nav-contact .nav-help {
+    color: var(--color-dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+nav .nav-contact .nav-phone {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1;
+}
+
+@media screen and (min-width: 576px) {
+    nav .nav-contact {
+        display: inline-block;
+    }
+}
+
+
+
+/* ----------------------
+    NAVBAR
+---------------------- */
+nav .navbar-collapse {
+    display: none;
+}
+
+nav .navbar-collapse.show {
+    display: block;
+}
+
+nav .navbar-collapse .navbar-nav {
     display: flex;
     flex-direction: column;
-    height: 0px;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
 }
 
-header .navbar-nav.open {
-    height: auto;
-    transition: all .3s ease-in-out;
-}
-
-header .navbar-nav li {
-    color: white;
-    border-bottom: 1px solid rgb(206, 198, 198);
-}
-
-header .navbar-nav li:first-child {
-    border-top: 1px solid rgb(206, 198, 198);
-}
-
-header .navbar-nav li .nav-link {
+nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    position: relative;
+    font-size: var(--font-size-nav-link);
+    color: var(--color-dark);
+    text-transform: capitalize;
     display: block;
-    padding: 30px 15px;
-    font-size: 1.5rem;
-    color: white;
+    padding: 20px;
+    text-align: left;
 }
 
-header .navbar-nav li .nav-link:hover {
+nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
     background: rgb(255, 255, 255);
-    color: black;
+}
+
+nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
+    position: absolute;
+    right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    nav .navbar-collapse .navbar-nav .nav-item {
+        border-top: 2px solid var(--color-border-nav-link);
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item:last-child {
+        border-bottom: 2px solid var(--color-border-nav-link);
+    }
 }
 
 @media screen and (min-width: 768px) {
-    header .navbar-nav {
-        height: auto;
-        flex-direction: row;
+    nav .navbar-collapse {
+        display: flex !important;
         justify-content: center;
     }
 
-    header .navbar-nav li {
-        border: none !important;
-        padding: 0;
+    nav .navbar-collapse .navbar-nav {
+        flex-direction: row;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+        margin: 0 10px 10px;
+        padding: 0 10px 10px;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+        background: transparent;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: var(--color-dark);
+        height: 2px;
+        transition: left .3s ease-out,right .3s ease-out;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover:before {
+        left: 0;
+        right: 0;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
+        display: none;
     }
 }
