@@ -16,4 +16,8 @@
 /* ----------------------
         ELEMENTS
 ---------------------- */
-@import "assets/css/_header.css"
+@import "assets/css/_header.css";
+
+@import "assets/css/_footer.css";
+
+@import "assets/css/_inscription.css";
