@@ -1,0 +1,53 @@
+main .container {
+    position: relative;
+    width: 100%;
+    margin: 240px auto;
+    background: var(--color-light);
+}
+
+.container .boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .boxes .box {
+    background-image: url(https://www.usinenouvelle.com/mediatheque/0/9/1/000794190_image_896x598/le-belem.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.box .fa-search {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.box .fa-times {
+    position: absolute;
+    top: 20px;
+    left: 90%;
+    transform: translateY(-50%);
+}
+
+.box .hide {
+    display: none;
+}
+
+.box .content {
+    display: none;
+}
+
+.box .content.show {
+    display: block;
+}

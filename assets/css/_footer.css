@@ -1,0 +1,27 @@
+footer {
+    background-color: gray;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer img {
+    width: 450px;
+    height: 300px;
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    footer .map {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+    }
+
+    footer img {
+        display: block;
+    }
+}

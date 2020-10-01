@@ -1,0 +1,51 @@
+h1, 
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.10rem;
+}
+
+.register {
+    margin:0 auto;
+    margin-top: 30px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+}
+
+.register label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register > div,
+.register button{
+
+    margin: 10px 0px;
+}
+
+.register input, 
+.register select, 
+.register textarea, 
+.register button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+
+@media screen and (min-width: 768px){
+    .register {
+        
+        max-width: 600px;
+        
+    }
+    
+}
