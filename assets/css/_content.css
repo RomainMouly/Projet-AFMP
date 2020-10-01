@@ -1,22 +1,14 @@
-body
-{
-        margin: 0;
-        padding: 0;
-        font-family: 'Courier New', Courier, monospace;
-}
-
-main .container
-{
-        position: relative;
-        width: 1200px;
-        height: 300px;
-        margin: 240px auto;
-        background: white;
-
+main .container {
+    position: relative;
+    width: 100%;
+    margin: 240px auto;
+    background: var(--color-light);
 }
 
 .container .boxes {
-    display: flex
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container .boxes .box {
@@ -31,7 +23,7 @@ main .container
     border-radius: 10px;
     overflow: hidden;
     width: 400px;
-        height: 400px;
+    height: 400px;
 }
 
 .box .fa-search {
@@ -47,17 +39,15 @@ main .container
     left: 90%;
     transform: translateY(-50%);
 }
-.box .icon .fa-search.hide,
-.box .icon .fa-times.hide{
+
+.box .hide {
     display: none;
 }
-
 
 .box .content {
     display: none;
 }
-.box .content.show{
+
+.box .content.show {
     display: block;
 }
-
-

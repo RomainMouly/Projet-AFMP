@@ -27,15 +27,12 @@ boxesArray.map(function (item) {
   const iconCross = item.getElementsByClassName('fa-times')
 
   iconLoop[0].addEventListener('click', function () {
-
     content[0].classList.add('show')
     iconLoop[0].classList.add('hide')
     iconCross[0].classList.remove('hide')
   })
 
-
   iconCross[0].addEventListener('click', function () {
-
     content[0].classList.remove('show')
     iconLoop[0].classList.remove('hide')
     iconCross[0].classList.add('hide')
