@@ -17,6 +17,11 @@
         ELEMENTS
 ---------------------- */
 @import "assets/css/_header.css";
+<<<<<<< HEAD
 @import "assets/css/_content.css";
 @import "assets/css/_footer.css";
 @import "assets/css/_inscription.css";
+=======
+@import "assets/css/_carousel.css";
+
+>>>>>>> delphine
