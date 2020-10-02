@@ -20,8 +20,8 @@ document.querySelector('#play').addEventListener('click', function(){
 });
 // Clic bouton pause
 document.querySelector('#pause').addEventListener('click', function(){
-    clearInterval(interval); */
- });
+    clearInterval(interval);
+});*/
 // Fonction "suivant"
 const next = function(){
     images[imgActive].classList.remove('show');

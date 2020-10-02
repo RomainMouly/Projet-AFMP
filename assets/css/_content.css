@@ -1,7 +1,16 @@
+main {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.permis {
+    margin-bottom: 40px;
+}
+
 main .container {
     position: relative;
     width: 100%;
-    margin: 240px auto;
+    margin: 0 auto;
     background: var(--color-light);
 }
 
@@ -9,6 +18,8 @@ main .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container .boxes .box {
@@ -19,21 +30,87 @@ main .container {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 10px;
+    margin: 25px;
     border-radius: 10px;
     overflow: hidden;
     width: 400px;
     height: 400px;
+    box-shadow: 0px 2px 9px -2px #000000;
+}
+
+.container .boxes .content-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(218, 209, 209, .75);
+    width: 100%;
+    height: 400px;
+}
+
+.container .boxes .content-container .content-title {
+    position: absolute;
+    margin: 0 auto;
+    color: rgb(36, 33, 33);
+    margin: 0;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    transition: all .5s ease-in-out .5s;
+}
+
+.container .boxes .content-container .content-title.show {
+    position: relative;
+    transition: all .5s ease-in-out .5s;
+}
+
+
+.container .boxes .content-container .content p {
+    color: rgb(36, 33, 33);
+    margin: 20px;
+    font-size: 1rem;
+}
+
+.container .boxes .content-container .content {
+    position: relative;
+}
+
+.container .boxes .content-container .content:before {
+    content: "";
+    background: var(--color-dark);
+    height: 2px;
+    width: 1px;
+    display: block;
+    margin: 0 auto;
+    transition: all .5s ease-in-out .3s;
+}
+
+.container .boxes .content-container .content.show:before {
+    width: 100px;
+}
+
+.box .icon i {
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+
+.box .icon i:hover {
+    font-size: 1.5rem;
 }
 
 .box .fa-search {
+    opacity: 1;
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
+    margin-top: 30px;
     transform: translateY(-50%);
 }
 
 .box .fa-times {
+    opacity: 1;
     position: absolute;
     top: 20px;
     left: 90%;
@@ -41,13 +118,34 @@ main .container {
 }
 
 .box .hide {
-    display: none;
+    opacity: 0;
 }
 
 .box .content {
-    display: none;
+    opacity: 0;
+    transition: all .5s ease-in-out .3s;
 }
 
 .box .content.show {
-    display: block;
+    opacity: 1;
+}
+
+
+.btn-register {
+    background:  #16415d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border: 2px solid rgb(205, 224, 236);
+    color: var(--color-light);
+    transition: all .3s ease-in-out;
+}
+
+.btn-register:hover {
+    background: rgb(205, 224, 236);
+    border-color: #16415d;
+    color: #16415d;
 }
