@@ -1,6 +1,6 @@
 nav {
     position: relative;
-    background: var(--color-navbar);
+    background: var(--color-light);
     width: 100%;
     text-align: center;
 }
@@ -113,7 +113,7 @@ nav .nav-contact .nav-help {
 }
 
 nav .nav-contact .nav-phone {
-    color: var(--color-primary);
+    color: var(--color-dark);
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1;
@@ -132,6 +132,7 @@ nav .nav-contact .nav-phone {
 ---------------------- */
 nav .navbar-collapse {
     display: none;
+    background: var(--color-dark);
 }
 
 nav .navbar-collapse.show {
@@ -146,15 +147,17 @@ nav .navbar-collapse .navbar-nav {
 nav .navbar-collapse .navbar-nav .nav-item .nav-link {
     position: relative;
     font-size: var(--font-size-nav-link);
-    color: var(--color-dark);
+    color: var(--color-light);
     text-transform: capitalize;
     display: block;
     padding: 20px;
     text-align: left;
+    font-family: var(--font-family-primary);
 }
 
 nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
-    background: rgb(255, 255, 255);
+    background: var(--color-light);
+    color: var(--color-dark);
 }
 
 nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
@@ -179,7 +182,13 @@ nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
     }
 
     nav .navbar-collapse .navbar-nav {
+        padding: 10px 0;
+        padding-top: 25px;
         flex-direction: row;
+    }
+
+    nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+        color: var(--color-light);
     }
 
     nav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -197,7 +206,7 @@ nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
         left: 50%;
         right: 50%;
         bottom: 0;
-        background: var(--color-dark);
+        background: var(--color-light);
         height: 2px;
         transition: left .3s ease-out,right .3s ease-out;
     }

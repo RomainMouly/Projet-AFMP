@@ -44,5 +44,3 @@ boxesArray.map(function (item) {
     }, 1000);
   })
 })
-
-// transition: all .3s ease-out;

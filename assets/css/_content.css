@@ -1,6 +1,9 @@
 main {
     text-align: center;
     padding-bottom: 40px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;;
 }
 
 .permis {
@@ -36,6 +39,10 @@ main .container {
     width: 400px;
     height: 400px;
     box-shadow: 0px 2px 9px -2px #000000;
+}
+
+.container .boxes .box:nth-child(-n+2) {
+    margin-top: 0;
 }
 
 .container .boxes .content-container {
@@ -132,20 +139,58 @@ main .container {
 
 
 .btn-register {
-    background:  #16415d;
+    background:  var(--color-dark);
     padding: 10px 20px;
     border-radius: 5px;
     margin: 0 auto;
     display: inline-block;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    border: 2px solid rgb(205, 224, 236);
+    border: 2px solid transparent;
     color: var(--color-light);
     transition: all .3s ease-in-out;
 }
 
 .btn-register:hover {
-    background: rgb(205, 224, 236);
+    background: var(--color-light);
     border-color: #16415d;
     color: #16415d;
+}
+
+
+
+/* ----------------------
+    PRESENTATION
+---------------------- */
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    line-height: 1.3;
+}
+
+main h1 span{
+    display: block;
+    font-size: 1.38rem;
+}
+
+main h2 {
+    margin-bottom: 30px;
+}
+
+main .presentation {
+    max-width: 867px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+main h2 {
+    font-size: 1.875rem;
+}
+
+main p {
+    display: block;
+    margin-bottom: 15px;
+    line-height: 150%;
+    font-size: 1.25rem;
+    text-align: justify;
 }

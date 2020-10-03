@@ -28,7 +28,6 @@ h2 {
 
 .register > div,
 .register button{
-
     margin: 10px 0px;
 }
 
@@ -41,11 +40,36 @@ h2 {
     padding: 8px;
 }
 
+.register button {
+    color: var(--color-light);
+    background: var(--color-dark);
+    border-color: transparent;
+    font-size: 1.3rem;
+}
+
+.register button:hover {
+    cursor: pointer;
+    color: var(--color-dark);
+    background: var(--color-light);
+    border-color: var(--color-dark);
+}
+
+.message {
+    text-align: center;
+}
+
+.message .alert {
+    display: block;
+    background: rgb(124, 212, 124);
+    color: black;
+    margin:0 auto;
+    margin-top: 30px;
+    padding: 15px;
+    max-width: 600px;
+}
+
 @media screen and (min-width: 768px){
     .register {
-        
         max-width: 600px;
-        
     }
-    
 }

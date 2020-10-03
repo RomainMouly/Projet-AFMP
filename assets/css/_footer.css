@@ -1,14 +1,28 @@
 footer {
-    background-color: gray;
+    background-color:var(--color-dark);
     text-align: center;
+    padding: 20px 0;
+}
+
+footer * {
+    font-family: var(--font-family-primary);
+}
+
+footer li {
+    color: var(--color-light);
+    margin: 20px 0;
+}
+
+footer li:first-child {
+    margin-top: 0;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: var(--color-light);
 }
 
-footer img {
+footer iframe {
     width: 450px;
     height: 300px;
     display: none;
@@ -21,7 +35,8 @@ footer img {
         height: 300px;
     }
 
-    footer img {
+    footer iframe {
         display: block;
+        border-radius: 10px;
     }
 }

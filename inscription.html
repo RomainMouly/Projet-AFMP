@@ -11,7 +11,9 @@
 
     <h2>Vous serez recontacté sous 48h</h2>
 
-    <form class="register">
+    <div class="message"></div>
+
+    <form class="register" id="register" action="#">
         <div>
             <label for="Permis">Sélectionner un permis :</label>
             <SELECT name="Permis">
@@ -50,10 +52,11 @@
             <textarea id="msg" name="user_message" rows="8"></textarea>
 
             <div class="button">
-                <button type="submit">Inscription</button>
+                <button class="btn" type="submit">Inscription</button>
             </div>
         </div>
     </form>
     
+    <script src="./form.js"></script>
 </body>
 </html>
