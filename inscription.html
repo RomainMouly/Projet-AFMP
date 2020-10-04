@@ -7,53 +7,84 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Inscription</h1>
+    <h1 class="register-title">Inscription</h1>
 
-    <h2>Vous serez recontacté sous 48h</h2>
+    <h2 class="register-intro">Vous serez recontacté sous 48h</h2>
 
-    <div class="message"></div>
+    <div class="message" id="message"></div>
 
-    <form class="register" id="register" action="#">
-        <div>
-            <label for="Permis">Sélectionner un permis :</label>
-            <SELECT name="Permis">
-                <OPTION>Côtier
-                <OPTION>Fluviale
-                <OPTION>Hauturier
-                <OPTION>Péniche
-            </SELECT>
+    <form class="register-form" id="register-form" action="#">
+        <div class="form-control">
+            <span class="input">
+                <select id="permis" name="permis" class="input-field">
+                    <option></option>
+                    <option value="cotier">Côtier</option>
+                    <option value="fluviale">Fluviale</option>
+                    <option value="hauturier">Hauturier</option>
+                    <option value="peniche">Péniche</option>
+                </select>
+                <label class="input-label" for="permis">
+                    <span class="input-label-content">Sélectionner un permis :</span>
+                </label>
+            </span>
         </div>
 
-        <div>
-            <label for="date">A partir de quand seriez vous disponible ?</label>
-            <input type="date" name="date">
+        <div class="form-control">
+            <span class="input">
+                <input type="date" id="date" name="date" class="input-field"/>
+                <label class="input-label" for="date">
+                    <span class="input-label-content">A partir de quand seriez vous disponible ?</span>
+                </label>
+            </span>
         </div>
 
-
-        <div>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="user_name">
+        <div class="form-control">
+            <span class="input">
+                <input type="text" id="lastname" name="lastname" class="input-field"/>
+                <label class="input-label" for="lastname">
+                    <span class="input-label-content">Nom :</span>
+                </label>
+            </span>
         </div>
 
-        <div>
-            <label for="firstname">Prénom :</label>
-            <input type="text" id="firstname" name="user_firstname">
+        <div class="form-control">
+            <span class="input">
+                <input type="text" id="firstname" name="firstname" class="input-field"/>
+                <label class="input-label" for="firstname">
+                    <span class="input-label-content">Prénom :</span>
+                </label>
+            </span>
         </div>
-        <div>
-            <label for="mail">E-mail :</label>
-            <input type="email" id="mail" name="user_mail">
-        </div>
-        <div>
-            <label for="phone">Téléphone:</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-        <div>
-            <label for="msg">Message complémentaire :</label>
-            <textarea id="msg" name="user_message" rows="8"></textarea>
 
-            <div class="button">
-                <button class="btn" type="submit">Inscription</button>
-            </div>
+        <div class="form-control">
+            <span class="input">
+                <input type="email" id="email" name="email" class="input-field"/>
+                <label class="input-label" for="email">
+                    <span class="input-label-content">Email :</span>
+                </label>
+            </span>
+        </div>
+
+        <div class="form-control">
+            <span class="input">
+                <input type="phone" id="phone" name="phone" class="input-field"/>
+                <label class="input-label" for="phone">
+                    <span class="input-label-content">Téléphone :</span>
+                </label>
+            </span>
+        </div>
+
+        <div class="form-control">
+            <span class="input">
+                <textarea id="message" name="message" rows="8" class="input-field"></textarea>
+                <label class="input-label" for="message">
+                    <span class="input-label-content">Message complémentaire :</span>
+                </label>
+            </span>
+        </div>
+
+        <div class="button">
+            <button class="btn" type="submit">Inscription</button>
         </div>
     </form>
     
