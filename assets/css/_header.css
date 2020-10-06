@@ -181,7 +181,7 @@ nav .navbar-collapse .navbar-nav .nav-item .nav-link i {
     }
 }
 
-     {
+@media screen and (min-width: 768px) {
     nav .navbar-collapse {
         display: flex !important;
         justify-content: center;
