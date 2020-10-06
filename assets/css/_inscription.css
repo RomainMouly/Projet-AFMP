@@ -1,59 +1,153 @@
-h1, 
-h2 {
+/* ----------------------
+    REGISTER TOP
+---------------------- */
+.register-title,
+.register-intro {
     text-align: center;
     margin: 20px;
 }
 
-h1{
+.register-title {
     font-size: 1.5rem;
 }
 
-h2 {
+.register-intro {
     font-size: 1.10rem;
 }
 
-.register {
-    margin:0 auto;
+
+
+/* ----------------------
+    REGISTER FORM
+---------------------- */
+.register-form {
+    width: calc(100% - 30px);
+    margin: 0 15px;
     margin-top: 30px;
     padding: 15px;
+    border: 1px solid var(--color-dark);
+}
+
+.register-form > .form-control,
+.register-form > button{
+    margin: 10px 0;
+}
+
+.register-form button {
     width: 100%;
-    max-width: 400px;
-    border: 1px solid black;
-}
-
-.register label{
-    display: block;
-    margin-bottom: 5px;
-}
-
-.register > div,
-.register button{
-    margin: 10px 0px;
-}
-
-.register input, 
-.register select, 
-.register textarea, 
-.register button {
-    display: block;
-    width: 100%;
-    padding: 8px;
-}
-
-.register button {
+    font-family: var(--font-family-secondary);
+    font-size: 1.3rem;
     color: var(--color-light);
     background: var(--color-dark);
     border-color: transparent;
-    font-size: 1.3rem;
 }
 
-.register button:hover {
-    cursor: pointer;
+.register-form button:hover {
     color: var(--color-dark);
     background: var(--color-light);
     border-color: var(--color-dark);
+    cursor: pointer;
 }
 
+.register-form input, 
+.register-form select, 
+.register-form textarea, 
+.register-form button {
+    padding: 8px;
+    font-family: var(--font-family-secondary);
+}
+
+@media screen and (min-width: 768px){
+    .register-form {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+
+
+/* ----------------------
+    REGISTER INPUT
+---------------------- */
+.register-form .input {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.register-form .input-field {
+	position: relative;
+	display: block;
+    float: right;
+    width: 100%;
+	margin: 1.3rem 0 .7rem 0;
+	border: none;
+	border-radius: 0;
+	background: rgb(236 237 241);
+    color: var(--color-input);
+    font-size: 100%;
+    font-weight: 200;
+}
+
+.register-form .input-field:focus {
+	outline: none;
+}
+
+.register-form .input-label {
+	position: absolute;
+	display: inline-block;
+	float: right;
+	padding: 0 0.25rem;
+	width: 100%;
+    height: calc(100% - 1.3rem);
+	color: var(--color-dark);
+	font-size: .95rem;
+	text-align: left;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.register-form .input-label::before,
+.register-form .input-label::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 1px solid var(--color-dark);
+}
+
+.register-form .input-label::after {
+	margin-top: 2px;
+    border-bottom-width: 4px;
+	transform: translate3d(-100%, 0, 0);
+	transition: transform .3s;
+}
+
+.register-form .input-label-content {
+	position: absolute;
+	display: block;
+	padding: 1rem 0;
+	width: 100%;
+	transform: translate3d(0, -70%, 0);
+}
+
+.register-form .input-field:focus + .input-label::after,
+.register-form .input--filled .input-label::after {
+	transform: translate3d(0, 0, 0);
+}
+
+
+
+/* ----------------------
+    ALERT MESSAGE
+---------------------- */
 .message {
     text-align: center;
 }
@@ -61,15 +155,9 @@ h2 {
 .message .alert {
     display: block;
     background: rgb(124, 212, 124);
-    color: black;
+    color: var(--color-dark);
     margin:0 auto;
     margin-top: 30px;
     padding: 15px;
     max-width: 600px;
-}
-
-@media screen and (min-width: 768px){
-    .register {
-        max-width: 600px;
-    }
 }

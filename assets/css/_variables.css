@@ -6,6 +6,7 @@
     --color-navbar: var(--color-light);
     --color-trigger-icon: var(--color-dark);
     --color-border-nav-link: rgba(78, 78, 78, .1);
+    --color-input: #6e6c83;
 
     --font-size-nav-link: 1.15rem;
 
