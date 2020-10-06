@@ -1,12 +1,12 @@
-@media screen and (min-width: 551px){
+@media screen and (min-width: 551px) {
 #sidebutton {
     position: fixed;
     left: 0;
-    top: 40%;
-    width: 4em;
+    top: 90%;
+    width: em;
     border: solid #16415d;
     border-left: none;
-    padding: 0.1em;
+    padding-right: 0.2em;
     box-shadow: 0 1px 3px black;
     border-radius: 0.5em 3em 3em 0.5em;
     background-color: white;
@@ -14,19 +14,19 @@
     z-index: 100;
 }}
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px){
 #sidebutton {
     position: fixed;
     right: 0;
     top: 0%;
-    width: 4em;
+    width: em;
     border: solid #16415d;
     border-right: none;
-    padding: 0.1em;
+    padding-left: 0.5em;
     box-shadow: 0 1px 3px black;
     border-radius: 3em 0.5em 0.5em 3em;
     background-color: white;
     opacity: 0.7;
     z-index: 100;
-}
-}
+
+}}
