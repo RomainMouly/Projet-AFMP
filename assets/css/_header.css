@@ -1,8 +1,14 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
 nav {
     position: relative;
     background: var(--color-light);
     width: 100%;
     text-align: center;
+    
 }
 
 

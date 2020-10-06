@@ -161,3 +161,17 @@
     padding: 15px;
     max-width: 600px;
 }
+
+#btn-retour{
+    background:  var(--color-dark);
+    padding: 2px 5px;
+    border-radius: 0em 0em 0.4em 0em;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border: 2px solid transparent;
+    color: var(--color-light);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}

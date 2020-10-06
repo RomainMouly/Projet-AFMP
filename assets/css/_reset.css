@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 
 p, h1, h2, h3, h4, h5, h6, li {
 	color: var(--color-dark);
-	font-family: var(--font-family-secondary);
+	font-family: var(--font-family-primary);
 }
 
 body {

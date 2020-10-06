@@ -1,9 +1,10 @@
 main {
     text-align: center;
     padding-bottom: 40px;
+    padding-top: 40px;
     max-width: 1200px;
     width: 90%;
-    margin: 0 auto;;
+    margin: 0 auto;
 }
 
 .permis {
@@ -72,7 +73,7 @@ main .container {
 .container .boxes .content-container .content-title {
     position: absolute;
     margin: 0 auto;
-    color: ##00171F
+    color: #00171F;
     margin: 0;
     font-size: 1.5rem;
     padding-bottom: 10px;
@@ -164,6 +165,8 @@ main .container {
     border: 2px solid transparent;
     color: var(--color-light);
     transition: all .3s ease-in-out;
+    font-family: var(--font-family-primary);
+    
 }
 
 .btn-register:hover {
