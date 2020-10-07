@@ -10,7 +10,8 @@ footer * {
 
 footer li {
     color: var(--color-light);
-    margin: 20px 0;
+    padding: 8px;
+    font-size: 0.9rem;
 }
 
 footer li:first-child {
@@ -27,6 +28,17 @@ footer iframe {
     height: 300px;
     display: none;
 }
+
+footer .mention {
+    display: inline-flex;
+    font-size: 0.5rem;
+}
+
+footer .mention li{
+    margin-top: 12px;
+    padding-right: 10px;
+}
+
 
 @media screen and (min-width: 480px) {
     footer .map {

@@ -114,15 +114,15 @@ nav .nav-contact {
 
 nav .nav-contact .nav-help {
     color: var(--color-dark);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 nav .nav-contact .nav-phone {
     color: var(--color-dark);
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1rem;
     letter-spacing: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media screen and (min-width: 576px) {
