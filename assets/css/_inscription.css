@@ -22,8 +22,7 @@
 ---------------------- */
 .register-form {
     width: calc(100% - 30px);
-    margin: 0 15px;
-    margin-top: 30px;
+    margin: 20px 15px 30px 15px;
     padding: 15px;
     border: 1px solid var(--color-dark);
 }
@@ -61,6 +60,7 @@
     .register-form {
         width: 100%;
         margin: 0 auto;
+        margin-top: 20px;
         max-width: 600px;
     }
 }
@@ -160,6 +160,11 @@
     margin-top: 30px;
     padding: 15px;
     max-width: 600px;
+}
+
+.message .alert-danger {
+    background-color: rgb(221, 129, 129);
+    color: #471a1a
 }
 
 #btn-retour{
